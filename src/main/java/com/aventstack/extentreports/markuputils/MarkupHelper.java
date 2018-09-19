@@ -20,5 +20,15 @@ public class MarkupHelper {
         t.setData(data);
         return t;
     }
-    
+
+    public static Markup createLink(String linksrc, String textLink) {
+        Link a = new Link();
+        a.setText(linksrc);
+        a.setLinkText(textLink);
+        return a;
+    }
+
+    public static Markup createLink(String linksrc){
+       return createLink(linksrc, "Test Video Link");
+    }
 }

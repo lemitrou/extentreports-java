@@ -15,6 +15,7 @@ public enum Status implements Serializable {
     WARNING,
     INFO,
     DEBUG,
+    DEFECT,
     SKIP;
 
     private static List<Status> statusHierarchy = Arrays.asList(
@@ -25,6 +26,7 @@ public enum Status implements Serializable {
             Status.SKIP,
             Status.PASS,
             Status.INFO,
+            Status.DEFECT,
             Status.DEBUG
     );
     
@@ -61,6 +63,7 @@ public enum Status implements Serializable {
                 Status.SKIP,
                 Status.PASS,
                 Status.INFO,
+                Status.DEFECT,
                 Status.DEBUG
         );
         
@@ -78,6 +81,7 @@ public enum Status implements Serializable {
             case INFO: return "info";
             case DEBUG: return "debug";
             case SKIP: return "skip";
+            case DEFECT: return "defect";
             default: return "unknown";
         }
     }
